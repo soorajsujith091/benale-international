@@ -1,132 +1,115 @@
 import { Link } from 'react-router-dom';
-import { Instagram, Facebook, Twitter } from 'lucide-react';
 
-const exploreLinks = [
+const menuLinks = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Rooms', href: '/tariff' },
   { label: 'Dining', href: '/food' },
   { label: 'Experience', href: '/highlights' },
-  { label: 'Contact', href: '/contact' },
+];
+
+const socialLinks = [
+  { label: 'Instagram', href: 'https://instagram.com/benale_international' },
+  { label: 'Facebook', href: 'https://facebook.com/benaleinternational' },
+  { label: 'Twitter', href: '#' },
+];
+
+const contactLinks = [
+  { label: 'info@benaleinternational.com', href: 'mailto:info@benaleinternational.com' },
+  { label: '+91 92880 34446', href: 'tel:+919288034446' },
 ];
 
 export default function Footer() {
   return (
-    <footer style={{ backgroundColor: 'var(--color-bg-dark)' }}>
-      <div className="container-luxury pt-16 lg:pt-24 pb-8 lg:pb-12">
-        {/* Top Row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Brand */}
-          <div>
-            <img
-              src="/assets/logo.svg"
-              alt="Benale International"
-              className="h-12 w-auto mb-4"
-              style={{ filter: 'brightness(0) invert(1)' }}
-            />
-            <p
-              className="text-sm"
-              style={{ color: 'rgba(255,255,255,0.6)' }}
-            >
-              Luxury Redefined in Kannur
-            </p>
-          </div>
+    <footer className="relative bg-[#050505] text-white overflow-hidden pt-16 lg:pt-24 z-10 pb-8 lg:pb-0">
+      {/* Background Image with Dark Overlay */}
+      <div 
+        className="absolute inset-0 z-0 pointer-events-none"
+        style={{
+          backgroundImage: 'url(/assets/hero-bg.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          opacity: 0.2
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-[#050505]/80 to-[#050505]"></div>
+      </div>
 
-          {/* Explore */}
-          <div>
-            <h4
-              className="font-label mb-6"
-              style={{ color: 'white', letterSpacing: '0.1em' }}
-            >
-              Explore
-            </h4>
-            <ul className="space-y-3">
-              {exploreLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    to={link.href}
-                    className="text-sm transition-colors duration-300 hover:text-white"
-                    style={{ color: 'rgba(255,255,255,0.6)' }}
-                  >
-                    {link.label}
-                  </Link>
+      <div className="container-luxury relative z-10 flex flex-col justify-between h-full">
+        
+        {/* Top Header */}
+        <div className="flex justify-between items-center mb-16 lg:mb-24">
+          <img src="/assets/logo.svg" alt="Benale" className="h-12 md:h-16 lg:h-20 brightness-0 invert" />
+          <p className="font-heading-3 text-xs md:text-sm lg:text-base tracking-[0.2em] text-white/80 uppercase">
+            Luxury Redefined.
+          </p>
+        </div>
+
+        {/* Links Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16 lg:mb-24 w-full">
+          
+          {/* MENU */}
+          <div className="flex flex-col">
+            <h3 className="text-sm font-bold tracking-widest uppercase mb-4">Menu</h3>
+            <div className="w-full h-px bg-white/20 mb-6"></div>
+            <ul className="flex flex-col gap-3">
+              {menuLinks.map(link => (
+                <li key={link.label}>
+                  <Link to={link.href} className="text-white/60 hover:text-white transition-colors text-sm">{link.label}</Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Contact */}
-          <div>
-            <h4
-              className="font-label mb-6"
-              style={{ color: 'white', letterSpacing: '0.1em' }}
-            >
-              Contact
-            </h4>
-            <div className="space-y-3 text-sm" style={{ color: 'rgba(255,255,255,0.6)' }}>
-              <p>Padannapalam Road, Opposite Sunshine Apartments, Manjapalam, Kannur, Kerala 670001</p>
-              <p>
-                <a href="tel:+919288034446" className="hover:text-white transition-colors">
-                  +91 92880 34446
-                </a>
-              </p>
-              <p>
-                <a href="mailto:info@benaleinternational.com" className="hover:text-white transition-colors">
-                  info@benaleinternational.com
-                </a>
-              </p>
-            </div>
+          {/* SOCIALS */}
+          <div className="flex flex-col">
+            <h3 className="text-sm font-bold tracking-widest uppercase mb-4">Socials</h3>
+            <div className="w-full h-px bg-white/20 mb-6"></div>
+            <ul className="flex flex-col gap-3">
+              {socialLinks.map(link => (
+                <li key={link.label}>
+                  <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors text-sm">{link.label}</a>
+                </li>
+              ))}
+            </ul>
           </div>
 
-          {/* Social */}
-          <div>
-            <h4
-              className="font-label mb-6"
-              style={{ color: 'white', letterSpacing: '0.1em' }}
-            >
-              Follow Us
-            </h4>
-            <div className="flex gap-4">
-              <a
-                href="https://instagram.com/benale_international"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-colors duration-300 hover:text-white"
-                style={{ color: 'rgba(255,255,255,0.6)' }}
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="https://facebook.com/benaleinternational"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-colors duration-300 hover:text-white"
-                style={{ color: 'rgba(255,255,255,0.6)' }}
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-colors duration-300 hover:text-white"
-                style={{ color: 'rgba(255,255,255,0.6)' }}
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-            </div>
+          {/* CONTACT */}
+          <div className="flex flex-col">
+            <h3 className="text-sm font-bold tracking-widest uppercase mb-4">Contact</h3>
+            <div className="w-full h-px bg-white/20 mb-6"></div>
+            <ul className="flex flex-col gap-3 mb-8">
+              {contactLinks.map(link => (
+                <li key={link.label}>
+                  <a href={link.href} className="text-white/60 hover:text-white transition-colors text-sm">{link.label}</a>
+                </li>
+              ))}
+            </ul>
+            <Link to="/contact" className="inline-block px-6 py-2.5 border border-white/30 rounded-full text-sm text-center hover:bg-white hover:text-black transition-all w-fit">
+              Send a message
+            </Link>
           </div>
+
         </div>
 
-        {/* Bottom Row */}
-        <div
-          className="mt-16 pt-8 flex flex-col md:flex-row justify-center items-center text-center"
-          style={{ borderTop: '1px solid var(--color-border-dark)' }}
-        >
-          <p className="font-label" style={{ color: 'rgba(255,255,255,0.4)' }}>
-            &copy; 2026 Benale International. All rights reserved.
-          </p>
+        {/* Giant Bottom Text */}
+        <div className="w-full relative overflow-hidden flex justify-center items-end mt-8 lg:mt-0">
+          <h1 
+            className="font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white/90 to-white/10"
+            style={{ 
+              fontSize: 'clamp(5rem, 24vw, 24rem)',
+              lineHeight: 0.75,
+              transform: 'translateY(16%)'
+            }}
+          >
+            BENALE
+          </h1>
         </div>
+      </div>
+      
+      {/* Copyright */}
+      <div className="absolute bottom-4 lg:bottom-6 left-0 w-full text-center z-20">
+        <p className="text-[10px] md:text-xs text-white/30 tracking-widest uppercase">Copyright 2026 &copy; BENALE INTERNATIONAL | Made with ❤️ Creatox Designs</p>
       </div>
     </footer>
   );

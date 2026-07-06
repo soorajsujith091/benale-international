@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useScrollReveal } from '../hooks/useScrollReveal';
-import { Sparkles, UtensilsCrossed, Waves, Crown } from 'lucide-react';
+import { UtensilsCrossed, Waves, Crown, ChevronLeft, ChevronRight } from 'lucide-react';
 
 /* ─── Hero Section ─── */
 function HeroSection() {
@@ -122,13 +122,16 @@ function HeroSection() {
         {/* Heading */}
         <div 
           ref={textRef}
-          className="w-full"
+          className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8"
           style={{ opacity: 0, transform: 'translateX(-30px)' }}
         >
-          <h1 className="text-white font-bold leading-tight tracking-tight" style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)' }}>
+          <h1 className="text-white font-bold leading-tight tracking-tight" style={{ fontSize: 'clamp(1.4rem, 5vw, 4.5rem)' }}>
             Find Your Perfect Stay<br />
             at the Best Price
           </h1>
+          <p className="text-white/90 text-sm md:text-lg lg:text-xl font-medium lg:text-right" style={{ maxWidth: '400px' }}>
+            Experience luxury in the heart of Kannur city. A premium stay just minutes away from major attractions.
+          </p>
         </div>
 
       </div>
@@ -311,7 +314,6 @@ function DiningSection() {
 function ExperienceSection() {
   const { ref, visible } = useScrollReveal();
   const features = [
-    { icon: Sparkles, title: 'Spa & Wellness', desc: 'Rejuvenate body and mind in our sanctuary of serenity. Ancient healing traditions meet modern therapeutic techniques.' },
     { icon: UtensilsCrossed, title: 'Fine Dining', desc: 'Savor culinary masterpieces crafted by award-winning chefs. From authentic Kerala cuisine to global gastronomy.' },
     { icon: Crown, title: 'Celebrations', desc: 'From intimate gatherings to grand weddings, our venues and expertise create moments that last a lifetime.' },
     { icon: Waves, title: 'Impeccable Service', desc: 'Our dedicated team anticipates your every need, ensuring a stay that exceeds every expectation.' },
@@ -321,7 +323,7 @@ function ExperienceSection() {
     <section style={{ backgroundColor: 'var(--color-bg-primary)' }} className="section-padding">
       <div className="container-luxury">
         <h2 className="font-heading-2 text-center mb-16">The Benale Experience</h2>
-        <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {features.map((feature, i) => (
             <div
               key={feature.title}
@@ -347,31 +349,99 @@ function ExperienceSection() {
 /* ─── Testimonial Section ─── */
 function TestimonialSection() {
   const { ref, visible } = useScrollReveal();
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
+  const reviews = [
+    {
+      text: "An excellent stay! The rooms are exceptionally clean and well-maintained. The location right in the heart of Kannur makes it so convenient for both business and leisure.",
+      author: "Rahul K.",
+      rating: 5
+    },
+    {
+      text: "One of the best hotels in Kannur. The staff is courteous, the amenities are top-notch, and the ambiance is very welcoming. Highly recommend for family stays.",
+      author: "Anita S.",
+      rating: 5
+    },
+    {
+      text: "A wonderful experience from check-in to check-out. The rooms are spacious and luxurious, and being close to the main attractions is a huge plus.",
+      author: "David M.",
+      rating: 5
+    },
+    {
+      text: "Outstanding hospitality and amazing food. The breakfast buffet had so many authentic Kerala options. We loved every bit of our stay.",
+      author: "Priya Menon",
+      rating: 5
+    },
+    {
+      text: "Perfect location and extremely comfortable rooms. The service provided by the staff exceeded all our expectations. Will definitely return!",
+      author: "Sanjay V.",
+      rating: 5
+    }
+  ];
+
+  const next = () => setCurrentIndex((i) => (i + 1) % reviews.length);
+  const prev = () => setCurrentIndex((i) => (i - 1 + reviews.length) % reviews.length);
+
+  useEffect(() => {
+    const timer = setInterval(next, 6000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const review = reviews[currentIndex];
 
   return (
-    <section style={{ backgroundColor: 'var(--color-bg-white)' }} className="section-padding">
+    <section style={{ backgroundColor: 'var(--color-bg-white)' }} className="section-padding overflow-hidden">
       <div className="container-luxury">
-        <div
+        <h2 className="font-heading-2 text-center mb-16">Guest Reviews</h2>
+        <div 
           ref={ref}
-          className="relative max-w-3xl mx-auto text-center"
+          className="relative max-w-4xl mx-auto"
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? 'translateY(0)' : 'translateY(30px)',
             transition: 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
           }}
         >
-          <span
-            className="absolute -top-8 left-0 font-heading-hero"
-            style={{ color: 'var(--color-accent-gold)', opacity: 0.3, fontSize: '8rem', lineHeight: 1 }}
-          >
-            &ldquo;
-          </span>
-          <blockquote className="font-heading-3 italic relative z-10" style={{ lineHeight: 1.6 }}>
-            An unforgettable stay. The attention to detail and warmth of service made our anniversary truly special. Every meal was a revelation, and the spa experience transported us to another world.
-          </blockquote>
-          <p className="font-label mt-8" style={{ color: 'var(--color-text-muted)' }}>
-            — Priya & Rajesh, Mumbai
-          </p>
+          <button onClick={prev} className="absolute left-0 top-1/2 -translate-y-1/2 -ml-2 lg:-ml-16 p-2 text-gray-400 hover:text-gray-900 transition-colors z-20 bg-white/80 rounded-full shadow-sm lg:shadow-none lg:bg-transparent">
+            <ChevronLeft size={32} />
+          </button>
+          
+          <div className="px-8 lg:px-16 py-8 text-center min-h-[280px] flex flex-col items-center justify-center relative">
+            <span
+              className="absolute top-0 left-1/2 -translate-x-1/2 font-heading-hero pointer-events-none"
+              style={{ color: 'var(--color-accent-gold)', opacity: 0.15, fontSize: '12rem', lineHeight: 1 }}
+            >
+              &ldquo;
+            </span>
+            <div className="flex gap-1 mb-8 justify-center relative z-10" style={{ color: 'var(--color-accent-gold)' }}>
+              {[...Array(review.rating)].map((_, j) => (
+                <svg key={j} className="w-6 h-6 fill-current" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <blockquote className="font-heading-3 italic text-lg md:text-xl relative z-10" style={{ lineHeight: 1.6, color: 'var(--color-text-primary)' }}>
+              "{review.text}"
+            </blockquote>
+            <p className="font-label mt-8 relative z-10" style={{ color: 'var(--color-text-muted)' }}>
+              — {review.author}
+            </p>
+          </div>
+          
+          <button onClick={next} className="absolute right-0 top-1/2 -translate-y-1/2 -mr-2 lg:-mr-16 p-2 text-gray-400 hover:text-gray-900 transition-colors z-20 bg-white/80 rounded-full shadow-sm lg:shadow-none lg:bg-transparent">
+            <ChevronRight size={32} />
+          </button>
+          
+          <div className="flex justify-center gap-3 mt-8">
+            {reviews.map((_, i) => (
+              <button 
+                key={i} 
+                onClick={() => setCurrentIndex(i)}
+                className={`transition-all duration-300 rounded-full ${i === currentIndex ? 'w-8 h-2 bg-gray-800' : 'w-2 h-2 bg-gray-300 hover:bg-gray-400'}`}
+                aria-label={`Go to slide ${i + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
