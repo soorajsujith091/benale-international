@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -8,6 +9,18 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 function BelCantoSection() {
   const { ref: leftRef, visible: leftVisible } = useScrollReveal();
   const { ref: rightRef, visible: rightVisible } = useScrollReveal();
+  const imageRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (imageRef.current) {
+        const rotation = window.scrollY * 0.1;
+        imageRef.current.style.transform = `rotate(${rotation}deg)`;
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <section style={{ backgroundColor: 'var(--color-bg-dark)' }} className="section-padding">
@@ -50,15 +63,20 @@ function BelCantoSection() {
 
         <div
           ref={rightRef}
+          className="flex justify-center items-center py-8"
           style={{
             opacity: rightVisible ? 1 : 0,
             transform: rightVisible ? 'translateY(0)' : 'translateY(30px)',
             transition: 'all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s',
           }}
         >
-          <div className="overflow-hidden shadow-2xl" style={{ aspectRatio: '4/3', borderRadius: '2px' }}>
-            <img src="/assets/food1.png" alt="Bel Canto Restaurant" className="w-full h-full object-cover" />
-          </div>
+          <img 
+            ref={imageRef}
+            src="/assets/roasted-duck.png" 
+            alt="Roasted Duck Breast with Daikon Salad" 
+            className="w-full max-w-[400px] lg:max-w-[500px] h-auto object-contain drop-shadow-2xl" 
+            style={{ willChange: 'transform' }}
+          />
         </div>
       </div>
     </section>
