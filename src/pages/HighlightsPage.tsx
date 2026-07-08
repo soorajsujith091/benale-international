@@ -148,13 +148,13 @@ export default function HighlightsPage() {
 
       <HighlightSection
         label="FINE DINING"
-        title="Bel Canto"
+        title="Bel Canto Restaurant"
         body={[
-          "Bel Canto, our signature fine-dining restaurant, is a celebration of culinary artistry. Under the guidance of Executive Chef Thomas Zachariah, the kitchen crafts dishes that honor Kerala's rich gastronomic heritage while embracing contemporary techniques and global influences.",
+          "Our signature fine-dining restaurant offering an exquisite journey through authentic Kerala cuisine and international gastronomy. The elegant setting perfectly complements the culinary masterpieces. Under the guidance of Executive Chef Thomas Zachariah, the kitchen crafts dishes that honor Kerala's rich gastronomic heritage while embracing contemporary techniques and global influences.",
           "The menu changes seasonally, featuring the freshest locally sourced seafood, spices from the Malabar coast, and produce from our own organic garden. Each plate is composed with the precision of a painting and the soul of a family recipe.",
           "The dining room, with its warm wood paneling, soft candlelight, and curated artwork, provides an intimate setting for up to 60 guests. Private dining alcoves offer exclusivity for special occasions."
         ]}
-        image="/assets/belcanto-main.jpg"
+        image="/assets/hl1.png"
         cta={{ text: 'View Menu \u2192', href: '/food' }}
         imageLeft={true}
         bgColor="var(--color-bg-primary)"
@@ -162,13 +162,13 @@ export default function HighlightsPage() {
 
       <HighlightSection
         label="CAFÉ & LOUNGE"
-        title="Cafe Launch"
+        title="Cafe Conclave"
         body={[
-          "Cafe Launch is the beating heart of Benale International \u2014 a vibrant, welcoming space where guests and locals alike gather to enjoy exceptional coffee, artisanal pastries, and light fare throughout the day.",
+          "A sophisticated 24-hour café and lounge perfect for casual meetings, high tea, or midnight cravings. Enjoy our selection of premium coffees, freshly baked pastries, and light bites throughout the day.",
           "By morning, the cafe buzzes with the aroma of freshly ground Malabar coffee and the gentle clink of porcelain. By afternoon, it transforms into a serene workspace for business travelers. As evening falls, Cafe Launch becomes a sophisticated lounge, offering craft cocktails and an intimate atmosphere for conversation.",
           "The interior design blends industrial chic with Kerala warmth \u2014 exposed brick walls, brass fixtures, comfortable leather seating, and large windows that flood the space with natural light."
         ]}
-        image="/assets/cafelaunch-main.jpg"
+        image="/assets/hl2.png"
         cta={{ text: 'Explore Cafe Launch \u2192', href: '/food' }}
         imageLeft={false}
         bgColor="var(--color-bg-white)"
@@ -176,13 +176,13 @@ export default function HighlightsPage() {
 
       <HighlightSection
         label="EVENTS & CELEBRATIONS"
-        title="Banquet Hall"
+        title="Grand Banquet Hall"
         body={[
-          "The Benale Banquet Hall is Kannur's premier venue for celebrations, conferences, and corporate events. With a capacity of up to 500 guests, this versatile space can be configured for intimate gatherings or grand galas.",
+          "Our pillar-less grand banquet hall is the city's most prestigious venue for weddings and large corporate events, featuring state-of-the-art acoustics and customizable lighting. With a capacity of up to 500 guests, this versatile space can be configured for intimate gatherings or grand galas.",
           "The hall features state-of-the-art audiovisual equipment, customizable lighting systems, and direct access to our catering facilities. Our dedicated events team works closely with each client to create bespoke experiences, from weddings and receptions to product launches and conferences.",
           "A separate bridal suite and pre-function lounge provide elegant spaces for preparation and welcome receptions. The adjacent courtyard offers a stunning outdoor option for cocktail hours and photo opportunities."
         ]}
-        image="/assets/banquet-main.jpg"
+        image="/assets/hl3.png"
         cta={{ text: 'Plan Your Event \u2192', href: '/contact' }}
         imageLeft={true}
         bgColor="var(--color-bg-primary)"
@@ -190,13 +190,13 @@ export default function HighlightsPage() {
 
       <HighlightSection
         label="BUSINESS & MEETINGS"
-        title="Board Rooms"
+        title="Executive Board Rooms"
         body={[
-          "Benale International offers three distinct board rooms designed for productive meetings and important decisions. Each space combines cutting-edge technology with refined comfort to create an environment where ideas flourish.",
+          "Fully equipped modern boardrooms designed for high-level meetings and corporate presentations, complete with advanced audiovisual technology and dedicated business support services to create an environment where ideas flourish.",
           "The Executive Board Room accommodates 20 guests in leather-appointed seating around a handcrafted mahogany table. The Conference Room seats 50 in a theater-style arrangement with full presentation capabilities. The intimate Strategy Room is ideal for senior leadership retreats and confidential discussions.",
           "All rooms feature high-speed Wi-Fi, wireless presentation systems, video conferencing capabilities, and dedicated refreshment services. Our business center provides additional support including printing, translation, and secretarial services."
         ]}
-        image="/assets/boardroom-main.jpg"
+        image="/assets/hl4.png"
         cta={{ text: 'Enquire Now \u2192', href: '/contact' }}
         imageLeft={false}
         bgColor="var(--color-bg-white)"

@@ -192,7 +192,7 @@ function AboutSection() {
         >
           <div className="overflow-hidden" style={{ aspectRatio: '3/4' }}>
             <img
-              src="/assets/about-interior.jpg"
+              src="/assets/IMG_4585.JPG.jpeg"
               alt="Benale International Interior"
               className="w-full h-full object-cover"
             />
@@ -207,9 +207,9 @@ function AboutSection() {
 function RoomsPreview() {
   const { ref, visible } = useScrollReveal();
   const rooms = [
-    { image: '/assets/room-deluxe.jpg', name: 'Deluxe Room', desc: '32 sqm \u00b7 City View', price: 'From \u20b98,500 / night' },
-    { image: '/assets/room-suite.jpg', name: 'Executive Suite', desc: '52 sqm \u00b7 Garden View \u00b7 Living Room', price: 'From \u20b915,000 / night' },
-    { image: '/assets/room-villa.jpg', name: 'Presidential Villa', desc: '120 sqm \u00b7 Private Pool \u00b7 Butler Service', price: 'From \u20b935,000 / night' },
+    { image: '/assets/sigle-standard.jpg', name: 'Standard Room', desc: 'SGL: \u20b92,800 \u00b7 DBL: \u20b93,200', price: 'From \u20b92,800 / night' },
+    { image: '/assets/semi-suite.jpg', name: 'Semi Suite', desc: 'SGL: \u20b93,500 \u00b7 DBL: \u20b94,000', price: 'From \u20b93,500 / night' },
+    { image: '/assets/executive.jpg', name: 'Executive Suite', desc: 'SGL: \u20b95,000 \u00b7 DBL: \u20b96,000', price: 'From \u20b95,000 / night' },
   ];
 
   return (
@@ -257,6 +257,18 @@ function RoomsPreview() {
 function DiningSection() {
   const { ref: leftRef, visible: leftVisible } = useScrollReveal();
   const { ref: rightRef, visible: rightVisible } = useScrollReveal();
+  const imageRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (imageRef.current) {
+        const rotation = window.scrollY * 0.1;
+        imageRef.current.style.transform = `rotate(${rotation}deg)`;
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <section className="section-padding bg-gray-50">
@@ -291,19 +303,20 @@ function DiningSection() {
 
         <div
           ref={rightRef}
-          className="space-y-8"
+          className="flex justify-center items-center py-8"
           style={{
             opacity: rightVisible ? 1 : 0,
             transform: rightVisible ? 'translateY(0)' : 'translateY(30px)',
             transition: 'all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s',
           }}
         >
-          <div className="overflow-hidden" style={{ aspectRatio: '16/10' }}>
-            <img src="/assets/dining-restaurant.jpg" alt="Restaurant" className="w-full h-full object-cover" />
-          </div>
-          <div className="overflow-hidden ml-[20%]" style={{ aspectRatio: '1/1' }}>
-            <img src="/assets/dining-detail.jpg" alt="Dining Detail" className="w-full h-full object-cover" />
-          </div>
+          <img 
+            ref={imageRef}
+            src="/assets/best-healthy-food.png" 
+            alt="Best Healthy Food" 
+            className="w-full max-w-[400px] lg:max-w-[500px] h-auto object-contain drop-shadow-2xl" 
+            style={{ willChange: 'transform' }}
+          />
         </div>
       </div>
     </section>

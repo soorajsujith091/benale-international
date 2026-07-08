@@ -56,8 +56,8 @@ function BelCantoSection() {
             transition: 'all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s',
           }}
         >
-          <div className="overflow-hidden" style={{ aspectRatio: '4/3' }}>
-            <img src="/assets/belcanto-interior.jpg" alt="Bel Canto Restaurant" className="w-full h-full object-cover" />
+          <div className="overflow-hidden shadow-2xl" style={{ aspectRatio: '4/3', borderRadius: '2px' }}>
+            <img src="/assets/food1.png" alt="Bel Canto Restaurant" className="w-full h-full object-cover" />
           </div>
         </div>
       </div>
@@ -161,8 +161,8 @@ function CafeLaunchSection() {
             transition: 'all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s',
           }}
         >
-          <div className="overflow-hidden" style={{ aspectRatio: '4/3' }}>
-            <img src="/assets/cafelaunch-interior.jpg" alt="Cafe Launch" className="w-full h-full object-cover" />
+          <div className="overflow-hidden shadow-2xl" style={{ aspectRatio: '4/3', borderRadius: '2px' }}>
+            <img src="/assets/food2.png" alt="Cafe Launch" className="w-full h-full object-cover" />
           </div>
         </div>
       </div>
@@ -222,7 +222,7 @@ function CTASection() {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: 'url(/assets/belcanto-main.jpg)',
+          backgroundImage: 'url(/assets/food1.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

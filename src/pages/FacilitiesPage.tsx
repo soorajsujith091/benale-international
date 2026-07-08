@@ -34,7 +34,7 @@ function AspireSection() {
           }}
         >
           <img
-            src="/assets/aspire-hero.jpg"
+            src="/assets/IMG_4585.JPG.jpeg"
             alt="Aspire Rooftop Venue"
             className="w-full h-full object-cover"
           />
@@ -154,7 +154,7 @@ function PoolSection() {
           }}
         >
           <div className="overflow-hidden" style={{ aspectRatio: '4/3', borderRadius: '2px' }}>
-            <img src="/assets/pool-hero.jpg" alt="Swimming Pool" className="w-full h-full object-cover" />
+            <img src="/assets/pool.png" alt="Swimming Pool" className="w-full h-full object-cover" />
           </div>
         </div>
       </div>
@@ -174,7 +174,7 @@ function CTASection() {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: 'url(/assets/pool-hero.jpg)',
+          backgroundImage: 'url(/assets/pool.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

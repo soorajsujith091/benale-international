@@ -116,7 +116,7 @@ function OurStory() {
           }}
         >
           <div className="overflow-hidden" style={{ aspectRatio: '4/5' }}>
-            <img src="/assets/about-interior.jpg" alt="Hotel Interior" className="w-full h-full object-cover" />
+            <img src="/assets/IMG_4585.JPG.jpeg" alt="Hotel Interior" className="w-full h-full object-cover" />
           </div>
         </div>
       </div>

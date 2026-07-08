@@ -6,24 +6,24 @@ import { Wifi, Tv, Wind, Refrigerator, ShieldCheck, UtensilsCrossed, Bath, Car }
 
 const rooms = [
   {
-    image: '/assets/room-deluxe.jpg',
-    name: 'Deluxe Room',
-    desc: '32 sqm \u00b7 City View',
-    price: 'From \u20b98,500 / night',
+    image: '/assets/sigle-standard.jpg',
+    name: 'Standard Room',
+    desc: 'SGL: \u20b92,800 \u00b7 DBL: \u20b93,200',
+    price: 'From \u20b92,800 / night',
     amenities: [Wifi, Tv, Wind, Refrigerator, ShieldCheck, UtensilsCrossed],
   },
   {
-    image: '/assets/room-suite.jpg',
-    name: 'Executive Suite',
-    desc: '52 sqm \u00b7 Garden View \u00b7 Living Room',
-    price: 'From \u20b915,000 / night',
+    image: '/assets/semi-suite.jpg',
+    name: 'Semi Suite',
+    desc: 'SGL: \u20b93,500 \u00b7 DBL: \u20b94,000',
+    price: 'From \u20b93,500 / night',
     amenities: [Wifi, Tv, Wind, Refrigerator, ShieldCheck, UtensilsCrossed, Bath],
   },
   {
-    image: '/assets/room-villa.jpg',
-    name: 'Presidential Villa',
-    desc: '120 sqm \u00b7 Private Pool \u00b7 Butler Service',
-    price: 'From \u20b935,000 / night',
+    image: '/assets/executive.jpg',
+    name: 'Executive Suite',
+    desc: 'SGL: \u20b95,000 \u00b7 DBL: \u20b96,000',
+    price: 'From \u20b95,000 / night',
     amenities: [Wifi, Tv, Wind, Refrigerator, ShieldCheck, UtensilsCrossed, Bath, Car],
   },
 ];
@@ -141,9 +141,9 @@ function ComparisonTable() {
             <thead>
               <tr style={{ borderBottom: '2px solid var(--color-border-dark)' }}>
                 <th className="font-label text-left py-4 px-4" style={{ color: 'var(--color-accent-gold)' }}>FEATURE</th>
-                <th className="font-label text-center py-4 px-4" style={{ color: 'var(--color-accent-gold)' }}>DELUXE ROOM</th>
+                <th className="font-label text-center py-4 px-4" style={{ color: 'var(--color-accent-gold)' }}>STANDARD ROOM</th>
+                <th className="font-label text-center py-4 px-4" style={{ color: 'var(--color-accent-gold)' }}>SEMI SUITE</th>
                 <th className="font-label text-center py-4 px-4" style={{ color: 'var(--color-accent-gold)' }}>EXECUTIVE SUITE</th>
-                <th className="font-label text-center py-4 px-4" style={{ color: 'var(--color-accent-gold)' }}>PRESIDENTIAL VILLA</th>
               </tr>
             </thead>
             <tbody>
