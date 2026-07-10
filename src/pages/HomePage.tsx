@@ -366,6 +366,11 @@ function TestimonialSection() {
   
   const reviews = [
     {
+      text: "A heartfelt thank you to Benale International, especially Mr. Siddique Pareth and Mr. Santosh, for organizing such a superb event. Everything was wonderful—from the excellent arrangements and warm hospitality to the delicious food. Every detail was thoughtfully planned, making the function a memorable experience. I was happy to refer many people to Benale International, and I will continue to recommend them to my friends, colleagues, and business connections. Wishing the entire Benale International team continued success. Thank you once again for your outstanding hospitality!",
+      author: "SATHEESH ARAKKEN",
+      rating: 5
+    },
+    {
       text: "An excellent stay! The rooms are exceptionally clean and well-maintained. The location right in the heart of Kannur makes it so convenient for both business and leisure.",
       author: "Rahul K.",
       rating: 5

@@ -16,7 +16,7 @@ const socialLinks = [
 
 const contactLinks = [
   { label: 'info@benaleinternational.com', href: 'mailto:info@benaleinternational.com' },
-  { label: '+91 92880 34446', href: 'tel:+919288034446' },
+  { label: '+91 92880 34449', href: 'tel:+919288034449' },
 ];
 
 export default function Footer() {

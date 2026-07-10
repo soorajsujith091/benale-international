@@ -7,9 +7,9 @@ import { MapPin, Phone, Mail, Calendar, Instagram, Facebook, Twitter, CheckCircl
 
 const contactDetails = [
   { icon: MapPin, label: 'ADDRESS', value: 'Padannapalam Road, Opposite Sunshine Apartments, Manjapalam, Kannur, Kerala 670001', href: null },
-  { icon: Phone, label: 'PHONE', value: '+91 92880 34446', href: 'tel:+919288034446' },
+  { icon: Phone, label: 'PHONE', value: '+91 92880 34449', href: 'tel:+919288034449' },
   { icon: Mail, label: 'EMAIL', value: 'info@benaleinternational.com', href: 'mailto:info@benaleinternational.com' },
-  { icon: Calendar, label: 'RESERVATIONS', value: '+91 92880 34447', href: 'tel:+919288034447' },
+  { icon: Calendar, label: 'RESERVATIONS', value: '+91 92880 34449', href: 'tel:+919288034449' },
 ];
 
 /* ─── Contact Info Section ─── */

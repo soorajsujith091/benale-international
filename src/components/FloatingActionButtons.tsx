@@ -19,7 +19,7 @@ export default function FloatingActionButtons() {
       }}
     >
       <a
-        href="tel:+919288034446"
+        href="tel:+919288034449"
         className="w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
         style={{
           backgroundColor: 'var(--color-accent-gold)',
@@ -30,7 +30,7 @@ export default function FloatingActionButtons() {
         <Phone className="w-6 h-6 text-white" />
       </a>
       <a
-        href="https://wa.me/919288034446"
+        href="https://wa.me/919288034449"
         target="_blank"
         rel="noopener noreferrer"
         className="w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
