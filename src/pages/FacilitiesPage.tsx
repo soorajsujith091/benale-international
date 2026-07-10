@@ -94,12 +94,10 @@ function PoolSection() {
   const { ref: imgRef, visible: imgVisible } = useScrollReveal();
 
   const features = [
-    '25-meter infinity pool',
-    'Heated jacuzzi',
-    'Swim-up bar',
-    'Luxury cabanas',
-    'Poolside dining service',
-    "Children's splash area",
+    'Outdoor swimming pool',
+    'Poolside relaxation area',
+    'Fresh towels provided',
+    'Family-friendly environment',
   ];
 
   return (
@@ -120,13 +118,10 @@ function PoolSection() {
           <h2 className="font-heading-1 mt-6">Swimming Pool</h2>
           <div className="mt-8 space-y-4" style={{ color: 'var(--color-text-secondary)' }}>
             <p>
-              The centerpiece of Benale International's leisure facilities is our stunning infinity-edge swimming pool. Set amidst lush tropical gardens, the pool appears to merge with the horizon, creating an illusion of swimming into the sky.
+              The centerpiece of Benale International's leisure facilities is our outdoor swimming pool. It offers a refreshing escape from the city, providing the perfect environment for a morning swim or a relaxing afternoon dip.
             </p>
             <p>
-              The 25-meter pool features a separate children's area, heated jacuzzi, and swim-up bar serving refreshing cocktails and light snacks. Luxurious cabanas with plush daybeds line the pool deck, offering private retreats for relaxation.
-            </p>
-            <p>
-              Our poolside service team attends to every need, from fresh towels and sunscreen to curated playlists and chilled beverages.
+              Guests can lounge by the poolside, enjoying the serene atmosphere. Our poolside service ensures you have everything you need for a comfortable and enjoyable experience.
             </p>
           </div>
 
@@ -174,7 +169,7 @@ function CTASection() {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: 'url(/assets/pool.png)',
+          backgroundImage: 'url(/assets/pool-hero.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

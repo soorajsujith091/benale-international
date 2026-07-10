@@ -151,7 +151,7 @@ export default function HighlightsPage() {
         title="Bel Canto Restaurant"
         body={[
           "Our signature fine-dining restaurant offering an exquisite journey through authentic Kerala cuisine and international gastronomy. The elegant setting perfectly complements the culinary masterpieces. Under the guidance of Executive Chef Thomas Zachariah, the kitchen crafts dishes that honor Kerala's rich gastronomic heritage while embracing contemporary techniques and global influences.",
-          "The menu changes seasonally, featuring the freshest locally sourced seafood, spices from the Malabar coast, and produce from our own organic garden. Each plate is composed with the precision of a painting and the soul of a family recipe.",
+          "The menu changes seasonally, featuring the freshest locally sourced seafood and spices from the Malabar coast. Each plate is composed with the precision of a painting and the soul of a family recipe.",
           "The dining room, with its warm wood paneling, soft candlelight, and curated artwork, provides an intimate setting for up to 60 guests. Private dining alcoves offer exclusivity for special occasions."
         ]}
         image="/assets/hl1.png"
@@ -165,11 +165,11 @@ export default function HighlightsPage() {
         title="Cafe Conclave"
         body={[
           "A sophisticated 24-hour café and lounge perfect for casual meetings, high tea, or midnight cravings. Enjoy our selection of premium coffees, freshly baked pastries, and light bites throughout the day.",
-          "By morning, the cafe buzzes with the aroma of freshly ground Malabar coffee and the gentle clink of porcelain. By afternoon, it transforms into a serene workspace for business travelers. As evening falls, Cafe Launch becomes a sophisticated lounge, offering craft cocktails and an intimate atmosphere for conversation.",
+          "By morning, the cafe buzzes with the aroma of freshly ground Malabar coffee and the gentle clink of porcelain. By afternoon, it transforms into a serene workspace for business travelers. As evening falls, Cafe Lounge becomes a sophisticated lounge, offering craft cocktails and an intimate atmosphere for conversation.",
           "The interior design blends industrial chic with Kerala warmth \u2014 exposed brick walls, brass fixtures, comfortable leather seating, and large windows that flood the space with natural light."
         ]}
         image="/assets/hl2.png"
-        cta={{ text: 'Explore Cafe Launch \u2192', href: '/food' }}
+        cta={{ text: 'Explore Cafe Lounge \u2192', href: '/food' }}
         imageLeft={false}
         bgColor="var(--color-bg-white)"
       />

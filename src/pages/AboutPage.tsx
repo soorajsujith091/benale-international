@@ -6,10 +6,10 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const galleryImages = [
   { src: '/assets/gallery-lobby.jpg', caption: 'The Grand Lobby' },
-  { src: '/assets/gallery-pool.jpg', caption: 'Poolside Serenity' },
+  { src: '/assets/gallery-pool.jpg', caption: 'Swimming Pool' },
   { src: '/assets/gallery-restaurant.jpg', caption: 'Bel Canto Restaurant' },
   { src: '/assets/gallery-room.jpg', caption: 'Luxury Accommodation' },
-  { src: '/assets/gallery-exterior.jpg', caption: 'Garden Walkway' },
+  { src: '/assets/gallery-exterior.jpg', caption: 'Hotel Exterior' },
 ];
 
 const pillars = [

@@ -42,9 +42,6 @@ function BelCantoSection() {
             <p>
               The dining room seats 60 guests in an atmosphere of understated elegance — warm wood, soft candlelight, and curated local artwork create the perfect backdrop for an unforgettable meal.
             </p>
-            <p>
-              Our wine cellar features over 200 labels from around the world, carefully selected to complement our menu. Our sommelier is always on hand to guide you through the perfect pairing.
-            </p>
           </div>
 
           <div className="flex gap-8 mt-8">
@@ -127,8 +124,8 @@ function BelCantoMenu() {
   );
 }
 
-/* ─── Cafe Launch Section ─── */
-function CafeLaunchSection() {
+/* ─── Cafe Lounge Section ─── */
+function CafeLoungeSection() {
   const { ref: leftRef, visible: leftVisible } = useScrollReveal();
   const { ref: rightRef, visible: rightVisible } = useScrollReveal();
 
@@ -144,10 +141,10 @@ function CafeLaunchSection() {
           }}
         >
           <span className="font-label" style={{ color: 'var(--color-accent-gold)', letterSpacing: '0.2em' }}>CAFÉ & LOUNGE</span>
-          <h2 className="font-heading-1 mt-6">Cafe Launch</h2>
+          <h2 className="font-heading-1 mt-6">Cafe Lounge</h2>
           <div className="mt-8 space-y-4" style={{ color: 'var(--color-text-secondary)' }}>
             <p>
-              Cafe Launch is where the energy of Kannur meets the comfort of Benale International. From the first pour of morning coffee to the last cocktail of the evening, this vibrant space is the hotel's living room — welcoming, warm, and endlessly engaging.
+              Cafe Lounge is where the energy of Kannur meets the comfort of Benale International. From the first pour of morning coffee to the last cocktail of the evening, this vibrant space is the hotel's living room — welcoming, warm, and endlessly engaging.
             </p>
             <p>
               Our coffee program celebrates the Malabar's rich coffee heritage, featuring single-origin beans roasted locally and prepared by our skilled baristas.
@@ -180,7 +177,7 @@ function CafeLaunchSection() {
           }}
         >
           <div className="overflow-hidden shadow-2xl" style={{ aspectRatio: '4/3', borderRadius: '2px' }}>
-            <img src="/assets/food2.png" alt="Cafe Launch" className="w-full h-full object-cover" />
+            <img src="/assets/food2.png" alt="Cafe Lounge" className="w-full h-full object-cover" />
           </div>
         </div>
       </div>
@@ -188,8 +185,8 @@ function CafeLaunchSection() {
   );
 }
 
-/* ─── Cafe Launch Menu ─── */
-function CafeLaunchMenu() {
+/* ─── Cafe Lounge Menu ─── */
+function CafeLoungeMenu() {
   const { ref, visible } = useScrollReveal();
   const items = [
     { name: 'Malabar Filter Coffee', desc: 'Traditional South Indian filter coffee with frothy milk', price: '\u20b9180' },
@@ -259,7 +256,7 @@ function CTASection() {
       >
         <h2 className="font-heading-2 text-white">Reserve Your Table</h2>
         <p className="mt-6 mx-auto" style={{ color: 'rgba(255,255,255,0.7)', maxWidth: '500px' }}>
-          Experience the finest dining in Kannur. Reserve your table at Bel Canto or Cafe Launch today.
+          Experience the finest dining in Kannur. Reserve your table at Bel Canto or Cafe Lounge today.
         </p>
         <Link
           to="/contact"
@@ -288,8 +285,8 @@ export default function FoodPage() {
       />
       <BelCantoSection />
       <BelCantoMenu />
-      <CafeLaunchSection />
-      <CafeLaunchMenu />
+      <CafeLoungeSection />
+      <CafeLoungeMenu />
       <CTASection />
       <Footer />
     </div>

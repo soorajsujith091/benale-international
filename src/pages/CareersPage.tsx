@@ -25,7 +25,7 @@ const openings = [
     department: 'F&B Service',
     location: 'Kannur',
     type: 'Full-time',
-    description: 'Deliver exceptional dining experiences at Bel Canto and Cafe Launch. Take orders, serve food and beverages, and anticipate guest needs.',
+    description: 'Deliver exceptional dining experiences at Bel Canto and Cafe Lounge. Take orders, serve food and beverages, and anticipate guest needs.',
     requirements: ['1+ years restaurant experience', 'Knowledge of food and wine', 'Warm personality'],
   },
   {

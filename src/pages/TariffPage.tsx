@@ -31,13 +31,10 @@ const rooms = [
 const comparisonData = [
   { feature: 'Room Size', deluxe: '32 sqm', suite: '52 sqm', villa: '120 sqm' },
   { feature: 'Bed Type', deluxe: 'King', suite: 'King', villa: 'King + Daybed' },
-  { feature: 'View', deluxe: 'City', suite: 'Garden', villa: 'Pool & Garden' },
+  { feature: 'View', deluxe: 'City', suite: 'City', villa: 'City' },
   { feature: 'Living Area', deluxe: '\u2014', suite: '\u2713', villa: '\u2713' },
-  { feature: 'Private Pool', deluxe: '\u2014', suite: '\u2014', villa: '\u2713' },
   { feature: 'Butler Service', deluxe: '\u2014', suite: '\u2014', villa: '\u2713' },
-  { feature: 'Bathtub', deluxe: '\u2014', suite: '\u2713', villa: '\u2713' },
   { feature: 'In-room Dining', deluxe: '\u2713', suite: '\u2713', villa: '\u2713' },
-  { feature: 'Spa Credits', deluxe: '\u2014', suite: '\u2014', villa: '\u20b95,000' },
   { feature: 'Airport Transfer', deluxe: '\u2014', suite: '\u2014', villa: '\u2713' },
   { feature: 'Breakfast', deluxe: '\u2713', suite: '\u2713', villa: '\u2713' },
 ];
