@@ -40,14 +40,14 @@ function BelCantoSection() {
               Bel Canto is the crown jewel of Benale International's culinary offerings. Named after the Italian tradition of beautiful singing, our restaurant celebrates the art of exquisite taste.
             </p>
             <p>
-              The dining room seats 60 guests in an atmosphere of understated elegance — warm wood, soft candlelight, and curated local artwork create the perfect backdrop for an unforgettable meal.
+              The dining room seats 76 guests in an atmosphere of understated elegance — warm wood, soft candlelight, and curated local artwork create the perfect backdrop for an unforgettable meal.
             </p>
           </div>
 
           <div className="flex gap-8 mt-8">
             {[
               { label: 'Cuisine', value: 'Contemporary Kerala \u00b7 Global' },
-              { label: 'Hours', value: '7:00 PM \u2013 11:00 PM' },
+              { label: 'Hours', value: '7:30 AM \u2013 10:30 PM' },
               { label: 'Dress Code', value: 'Smart Casual' },
             ].map((detail) => (
               <div key={detail.label}>
@@ -144,7 +144,7 @@ function CafeLoungeSection() {
           <h2 className="font-heading-1 mt-6">Cafe Lounge</h2>
           <div className="mt-8 space-y-4" style={{ color: 'var(--color-text-secondary)' }}>
             <p>
-              Cafe Lounge is where the energy of Kannur meets the comfort of Benale International. From the first pour of morning coffee to the last cocktail of the evening, this vibrant space is the hotel's living room — welcoming, warm, and endlessly engaging.
+              Cafe Lounge is where the energy of Kannur meets the comfort of Benale International. From the first pour of coffee to the last cocktail of the evening, this vibrant space is the hotel's living room — welcoming, warm, and endlessly engaging.
             </p>
             <p>
               Our coffee program celebrates the Malabar's rich coffee heritage, featuring single-origin beans roasted locally and prepared by our skilled baristas.
@@ -157,7 +157,7 @@ function CafeLoungeSection() {
           <div className="flex gap-8 mt-8 flex-wrap">
             {[
               { label: 'Cuisine', value: 'All-Day Dining \u00b7 Coffee \u00b7 Cocktails' },
-              { label: 'Hours', value: '7:00 AM \u2013 11:00 PM' },
+              { label: 'Hours', value: '11:00 AM \u2013 11:00 PM' },
               { label: 'Atmosphere', value: 'Casual \u00b7 Vibrant' },
             ].map((detail) => (
               <div key={detail.label}>
@@ -189,10 +189,10 @@ function CafeLoungeSection() {
 function CafeLoungeMenu() {
   const { ref, visible } = useScrollReveal();
   const items = [
-    { name: 'Malabar Filter Coffee', desc: 'Traditional South Indian filter coffee with frothy milk', price: '\u20b9180' },
-    { name: 'Avocado Toast', desc: 'Sourdough, smashed avocado, poached egg, microgreens', price: '\u20b9450' },
-    { name: 'Kerala Egg Curry Bun', desc: 'Soft brioche bun with spiced egg curry filling', price: '\u20b9320' },
-    { name: 'Tiramisu', desc: 'Classic Italian dessert with a Kerala coffee twist', price: '\u20b9380' },
+    { name: 'Cheesecake', desc: 'Rich and creamy New York-style cheesecake with berry compote' },
+    { name: 'Classic Panini Sandwich', desc: 'Grilled panini with fresh mozzarella, tomatoes, and basil pesto' },
+    { name: 'Parmesan Chicken', desc: 'Crispy breaded chicken breast topped with marinara and melted parmesan' },
+    { name: 'Affogato', desc: 'Vanilla bean ice cream drowned in a shot of hot espresso' },
   ];
 
   return (
@@ -216,7 +216,6 @@ function CafeLoungeMenu() {
             >
               <h4 className="font-heading-3" style={{ fontSize: '1.1rem' }}>{item.name}</h4>
               <p className="text-sm mt-2" style={{ color: 'var(--color-text-secondary)' }}>{item.desc}</p>
-              <p className="text-sm mt-4 font-medium" style={{ color: 'var(--color-accent-gold)' }}>{item.price}</p>
             </div>
           ))}
         </div>
@@ -258,15 +257,15 @@ function CTASection() {
         <p className="mt-6 mx-auto" style={{ color: 'rgba(255,255,255,0.7)', maxWidth: '500px' }}>
           Experience the finest dining in Kannur. Reserve your table at Bel Canto or Cafe Lounge today.
         </p>
-        <Link
-          to="/contact"
+        <a
+          href="tel:+918137069997"
           className="inline-block mt-8 px-10 py-4 font-nav text-white transition-all duration-300 hover:-translate-y-0.5"
           style={{ backgroundColor: 'var(--color-accent-gold)', letterSpacing: '0.1em' }}
           onMouseEnter={(e) => { (e.target as HTMLElement).style.backgroundColor = 'var(--color-accent-gold-light)'; }}
           onMouseLeave={(e) => { (e.target as HTMLElement).style.backgroundColor = 'var(--color-accent-gold)'; }}
         >
           Make a Reservation
-        </Link>
+        </a>
       </div>
     </section>
   );

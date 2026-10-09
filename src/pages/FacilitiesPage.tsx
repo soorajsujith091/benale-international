@@ -10,9 +10,8 @@ function AspireSection() {
   const { ref: textRef, visible: textVisible } = useScrollReveal();
 
   const features = [
-    '500-guest capacity',
+    '300-guest capacity',
     'Panoramic city & sea views',
-    'Dedicated bar & VIP lounge',
     'Customizable lighting & decor',
     'Direct kitchen access',
     'Bespoke catering menus',
@@ -57,7 +56,7 @@ function AspireSection() {
             <h2 className="font-heading-1 text-white mt-6">Aspire</h2>
             <div className="mt-8 space-y-4" style={{ color: 'rgba(255,255,255,0.7)' }}>
               <p>
-                Perched atop Benale International, Aspire is a breathtaking rooftop venue that transforms every event into an extraordinary experience. With panoramic views of Kannur's skyline and the Arabian Sea in the distance, this open-air space accommodates up to 500 guests for weddings, corporate gatherings, and celebrations of every kind.
+                Perched atop Benale International, Aspire is a breathtaking rooftop venue that transforms every event into an extraordinary experience. With panoramic views of Kannur's skyline and the Arabian Sea in the distance, this open-air space accommodates up to 300 guests for weddings, corporate gatherings, and celebrations of every kind.
               </p>
               <p>
                 By day, Aspire basks in warm sunlight filtered through elegant canopies. By night, it becomes a magical setting under a canopy of stars, illuminated by thousands of fairy lights and the warm glow of fire pits.
@@ -74,13 +73,13 @@ function AspireSection() {
               ))}
             </ul>
 
-            <Link
-              to="/contact"
+            <a
+              href="tel:+918137069997"
               className="inline-block mt-8 font-nav gold-underline"
               style={{ color: 'var(--color-accent-gold)' }}
             >
               Plan Your Event →
-            </Link>
+            </a>
           </div>
         </div>
       </div>

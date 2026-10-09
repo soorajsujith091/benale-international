@@ -88,18 +88,27 @@ function HeroSection() {
             <img 
               src="/assets/logo.svg" 
               alt="Benale International" 
-              className="h-10 w-auto" 
+              className="h-12 lg:h-14 w-auto" 
               style={{ filter: 'brightness(0) invert(1)' }} 
             />
           </Link>
           <div className="hidden lg:flex items-center gap-8">
-            {['Home', 'About', 'Highlights', 'Facilities', 'Rooms', 'Dining', 'Careers', 'Contact'].map((item) => (
+            {[
+              { label: 'Home', href: '/' },
+              { label: 'About', href: '/about' },
+              { label: 'Highlights', href: '/highlights' },
+              { label: 'Facilities', href: '/facilities' },
+              { label: 'Rooms', href: '/tariff' },
+              { label: 'Dining', href: '/food' },
+              { label: 'Careers', href: '/careers' },
+              { label: 'Contact', href: '/contact' },
+            ].map((item) => (
               <Link 
-                key={item} 
-                to={item === 'Home' ? '/' : `/${item.toLowerCase()}`} 
+                key={item.href} 
+                to={item.href} 
                 className="text-white/80 hover:text-white transition-colors font-medium"
               >
-                {item}
+                {item.label}
               </Link>
             ))}
           </div>

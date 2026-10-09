@@ -36,13 +36,23 @@ function HighlightSection({ label, title, body, image, cta, imageLeft, bgColor }
           <p key={i}>{p}</p>
         ))}
       </div>
-      <Link
-        to={cta.href}
-        className="inline-block mt-8 font-nav gold-underline"
-        style={{ color: 'var(--color-accent-gold)' }}
-      >
-        {cta.text}
-      </Link>
+      {cta.href.startsWith('tel:') || cta.href.startsWith('http') || cta.href.startsWith('mailto:') ? (
+        <a
+          href={cta.href}
+          className="inline-block mt-8 font-nav gold-underline"
+          style={{ color: 'var(--color-accent-gold)' }}
+        >
+          {cta.text}
+        </a>
+      ) : (
+        <Link
+          to={cta.href}
+          className="inline-block mt-8 font-nav gold-underline"
+          style={{ color: 'var(--color-accent-gold)' }}
+        >
+          {cta.text}
+        </Link>
+      )}
     </div>
   );
 
@@ -150,9 +160,9 @@ export default function HighlightsPage() {
         label="FINE DINING"
         title="Bel Canto Restaurant"
         body={[
-          "Our signature fine-dining restaurant offering an exquisite journey through authentic Kerala cuisine and international gastronomy. The elegant setting perfectly complements the culinary masterpieces. Under the guidance of Executive Chef Thomas Zachariah, the kitchen crafts dishes that honor Kerala's rich gastronomic heritage while embracing contemporary techniques and global influences.",
+          "Our signature fine-dining restaurant offering an exquisite journey through authentic Kerala cuisine and international gastronomy. The elegant setting perfectly complements the culinary masterpieces. Our kitchen crafts dishes that honor Kerala's rich gastronomic heritage while embracing contemporary techniques and global influences.",
           "The menu changes seasonally, featuring the freshest locally sourced seafood and spices from the Malabar coast. Each plate is composed with the precision of a painting and the soul of a family recipe.",
-          "The dining room, with its warm wood paneling, soft candlelight, and curated artwork, provides an intimate setting for up to 60 guests. Private dining alcoves offer exclusivity for special occasions."
+          "The dining room, with its warm wood paneling, soft candlelight, and curated artwork, provides an intimate setting for up to 76 guests. Private dining alcoves offer exclusivity for special occasions."
         ]}
         image="/assets/hl1.png"
         cta={{ text: 'View Menu \u2192', href: '/food' }}
@@ -164,8 +174,8 @@ export default function HighlightsPage() {
         label="CAFÉ & LOUNGE"
         title="Cafe Conclave"
         body={[
-          "A sophisticated 24-hour café and lounge perfect for casual meetings, high tea, or midnight cravings. Enjoy our selection of premium coffees, freshly baked pastries, and light bites throughout the day.",
-          "By morning, the cafe buzzes with the aroma of freshly ground Malabar coffee and the gentle clink of porcelain. By afternoon, it transforms into a serene workspace for business travelers. As evening falls, Cafe Lounge becomes a sophisticated lounge, offering craft cocktails and an intimate atmosphere for conversation.",
+          "A sophisticated café and lounge perfect for casual meetings, high tea, or evening cravings. Enjoy our selection of premium coffees, freshly baked pastries, and light bites throughout the day.",
+          "From late morning, the cafe buzzes with the aroma of freshly ground Malabar coffee and the gentle clink of porcelain. By afternoon, it transforms into a serene workspace for business travelers. As evening falls, Cafe Lounge becomes a sophisticated lounge, offering craft cocktails and an intimate atmosphere for conversation.",
           "The interior design blends industrial chic with Kerala warmth \u2014 exposed brick walls, brass fixtures, comfortable leather seating, and large windows that flood the space with natural light."
         ]}
         image="/assets/hl2.png"
@@ -178,12 +188,11 @@ export default function HighlightsPage() {
         label="EVENTS & CELEBRATIONS"
         title="Grand Banquet Hall"
         body={[
-          "Our pillar-less grand banquet hall is the city's most prestigious venue for weddings and large corporate events, featuring state-of-the-art acoustics and customizable lighting. With a capacity of up to 500 guests, this versatile space can be configured for intimate gatherings or grand galas.",
-          "The hall features state-of-the-art audiovisual equipment, customizable lighting systems, and direct access to our catering facilities. Our dedicated events team works closely with each client to create bespoke experiences, from weddings and receptions to product launches and conferences.",
-          "A separate bridal suite and pre-function lounge provide elegant spaces for preparation and welcome receptions. The adjacent courtyard offers a stunning outdoor option for cocktail hours and photo opportunities."
+          "Our pillar-less grand banquet hall is the city's most prestigious venue for weddings and large corporate events, featuring state-of-the-art acoustics and customizable lighting. With a capacity of up to 300 guests, this versatile space can be configured for intimate gatherings or grand galas.",
+          "The hall features state-of-the-art audiovisual equipment, customizable lighting systems, and direct access to our catering facilities. Our dedicated events team works closely with each client to create bespoke experiences, from weddings and receptions to product launches and conferences."
         ]}
         image="/assets/hl3.png"
-        cta={{ text: 'Plan Your Event \u2192', href: '/contact' }}
+        cta={{ text: 'Plan Your Event \u2192', href: 'tel:+918137069997' }}
         imageLeft={true}
         bgColor="var(--color-bg-primary)"
       />

@@ -28,16 +28,7 @@ const rooms = [
   },
 ];
 
-const comparisonData = [
-  { feature: 'Room Size', deluxe: '32 sqm', suite: '52 sqm', villa: '120 sqm' },
-  { feature: 'Bed Type', deluxe: 'King', suite: 'King', villa: 'King + Daybed' },
-  { feature: 'View', deluxe: 'City', suite: 'City', villa: 'City' },
-  { feature: 'Living Area', deluxe: '\u2014', suite: '\u2713', villa: '\u2713' },
-  { feature: 'Butler Service', deluxe: '\u2014', suite: '\u2014', villa: '\u2713' },
-  { feature: 'In-room Dining', deluxe: '\u2713', suite: '\u2713', villa: '\u2713' },
-  { feature: 'Airport Transfer', deluxe: '\u2014', suite: '\u2014', villa: '\u2713' },
-  { feature: 'Breakfast', deluxe: '\u2713', suite: '\u2713', villa: '\u2713' },
-];
+
 
 const commonAmenities = [
   { icon: Wifi, label: 'High-Speed Wi-Fi' },
@@ -125,54 +116,6 @@ function RoomCards() {
   );
 }
 
-/* ─── Comparison Table ─── */
-function ComparisonTable() {
-  const { ref, visible } = useScrollReveal();
-
-  return (
-    <section style={{ backgroundColor: 'var(--color-bg-white)' }} className="section-padding">
-      <div className="container-luxury" style={{ maxWidth: '1000px' }}>
-        <h2 className="font-heading-2 text-center mb-12">Compare Room Features</h2>
-        <div ref={ref} className="overflow-x-auto" style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(30px)', transition: 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)' }}>
-          <table className="w-full">
-            <thead>
-              <tr style={{ borderBottom: '2px solid var(--color-border-dark)' }}>
-                <th className="font-label text-left py-4 px-4" style={{ color: 'var(--color-accent-gold)' }}>FEATURE</th>
-                <th className="font-label text-center py-4 px-4" style={{ color: 'var(--color-accent-gold)' }}>STANDARD ROOM</th>
-                <th className="font-label text-center py-4 px-4" style={{ color: 'var(--color-accent-gold)' }}>SEMI SUITE</th>
-                <th className="font-label text-center py-4 px-4" style={{ color: 'var(--color-accent-gold)' }}>EXECUTIVE SUITE</th>
-              </tr>
-            </thead>
-            <tbody>
-              {comparisonData.map((row, i) => (
-                <tr
-                  key={row.feature}
-                  style={{
-                    backgroundColor: i % 2 === 0 ? 'white' : '#faf8f5',
-                    borderBottom: '1px solid var(--color-border)',
-                  }}
-                >
-                  <td className="py-4 px-4 text-sm font-medium">{row.feature}</td>
-                  {[row.deluxe, row.suite, row.villa].map((val, j) => (
-                    <td
-                      key={j}
-                      className="py-4 px-4 text-sm text-center"
-                      style={{
-                        color: val === '\u2713' ? 'var(--color-accent-gold)' : val === '\u2014' ? 'var(--color-text-muted)' : 'var(--color-text-primary)',
-                      }}
-                    >
-                      {val}
-                    </td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 /* ─── Amenities Grid ─── */
 function AmenitiesGrid() {
@@ -261,7 +204,6 @@ export default function TariffPage() {
         breadcrumb={[{ label: 'Home', href: '/' }, { label: 'Rooms & Tariff', href: '/tariff' }]}
       />
       <RoomCards />
-      <ComparisonTable />
       <AmenitiesGrid />
       <CTASection />
       <Footer />

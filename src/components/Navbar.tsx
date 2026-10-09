@@ -51,7 +51,7 @@ export default function Navbar({ transparent = false }: { transparent?: boolean 
               <img
                 src="/assets/logo.svg"
                 alt="Benale International"
-                className="h-10 w-auto transition-all duration-300"
+                className="h-12 lg:h-14 w-auto transition-all duration-300"
                 style={{ filter: isTransparent ? 'brightness(0) invert(1)' : 'none' }}
               />
             </Link>
