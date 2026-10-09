@@ -258,7 +258,7 @@ function CTASection() {
           Experience the finest dining in Kannur. Reserve your table at Bel Canto or Cafe Lounge today.
         </p>
         <a
-          href="tel:+918137069997"
+          href="tel:+919633069997"
           className="inline-block mt-8 px-10 py-4 font-nav text-white transition-all duration-300 hover:-translate-y-0.5"
           style={{ backgroundColor: 'var(--color-accent-gold)', letterSpacing: '0.1em' }}
           onMouseEnter={(e) => { (e.target as HTMLElement).style.backgroundColor = 'var(--color-accent-gold-light)'; }}
