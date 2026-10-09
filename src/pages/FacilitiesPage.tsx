@@ -73,9 +73,15 @@ function AspireSection() {
               ))}
             </ul>
 
+            <div className="mt-8 pt-6 border-t border-white/10" style={{ color: 'rgba(255,255,255,0.7)' }}>
+              <p className="text-sm uppercase tracking-wider mb-2 font-label" style={{ color: 'var(--color-accent-gold)' }}>Banquet Enquiries</p>
+              <p className="text-sm">+91 92880 34447 (GM Benale)</p>
+              <p className="text-sm">+91 81370 69997 (OM Benale)</p>
+            </div>
+
             <a
-              href="tel:+918137069997"
-              className="inline-block mt-8 font-nav gold-underline"
+              href="tel:+919288034447"
+              className="inline-block mt-6 font-nav gold-underline"
               style={{ color: 'var(--color-accent-gold)' }}
             >
               Plan Your Event →
@@ -205,6 +211,59 @@ function CTASection() {
   );
 }
 
+/* ─── Other Facilities Section ─── */
+function OtherFacilitiesSection() {
+  const { ref, visible } = useScrollReveal();
+  
+  const facilities = [
+    'Swimming pool',
+    'Gym',
+    'Gift shop',
+    '24/7 taxi service',
+    'Laundry service',
+    'Room service',
+  ];
+
+  return (
+    <section style={{ backgroundColor: 'var(--color-bg-white)' }} className="section-padding">
+      <div className="container-luxury">
+        <div
+          ref={ref}
+          style={{
+            opacity: visible ? 1 : 0,
+            transform: visible ? 'translateY(0)' : 'translateY(30px)',
+            transition: 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+          }}
+        >
+          <div className="text-center mb-16">
+            <span className="font-label" style={{ color: 'var(--color-accent-gold)' }}>
+              AMENITIES
+            </span>
+            <h2 className="font-heading-2 mt-4">Additional Facilities</h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {facilities.map((facility, i) => (
+              <div 
+                key={facility} 
+                className="flex items-center p-6 bg-gray-50 border border-gray-100 transition-all hover:-translate-y-1 hover:shadow-md"
+                style={{
+                  opacity: visible ? 1 : 0,
+                  transform: visible ? 'translateY(0)' : 'translateY(20px)',
+                  transition: `all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${i * 0.1}s`,
+                }}
+              >
+                <div className="w-3 h-3 rounded-full mr-4" style={{ backgroundColor: 'var(--color-accent-gold)' }} />
+                <span className="font-heading-3 text-lg">{facility}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ─── Facilities Page ─── */
 export default function FacilitiesPage() {
   return (
@@ -218,6 +277,7 @@ export default function FacilitiesPage() {
       />
       <AspireSection />
       <PoolSection />
+      <OtherFacilitiesSection />
       <CTASection />
       <Footer />
     </div>

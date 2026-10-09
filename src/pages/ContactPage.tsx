@@ -10,6 +10,8 @@ const contactDetails = [
   { icon: Phone, label: 'PHONE', value: '+91 92880 34449', href: 'tel:+919288034449' },
   { icon: Mail, label: 'EMAIL', value: 'info@benaleinternational.com', href: 'mailto:info@benaleinternational.com' },
   { icon: Calendar, label: 'RESERVATIONS', value: '+91 92880 34449', href: 'tel:+919288034449' },
+  { icon: Phone, label: 'BANQUET (GM)', value: '+91 92880 34447', href: 'tel:+919288034447' },
+  { icon: Phone, label: 'BANQUET (OM)', value: '+91 81370 69997', href: 'tel:+918137069997' },
 ];
 
 /* ─── Contact Info Section ─── */

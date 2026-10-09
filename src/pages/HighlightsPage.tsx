@@ -157,58 +157,66 @@ export default function HighlightsPage() {
       />
 
       <HighlightSection
-        label="FINE DINING"
-        title="Bel Canto Restaurant"
+        label="EVENTS & CELEBRATIONS"
+        title="Aspire"
         body={[
-          "Our signature fine-dining restaurant offering an exquisite journey through authentic Kerala cuisine and international gastronomy. The elegant setting perfectly complements the culinary masterpieces. Our kitchen crafts dishes that honor Kerala's rich gastronomic heritage while embracing contemporary techniques and global influences.",
-          "The menu changes seasonally, featuring the freshest locally sourced seafood and spices from the Malabar coast. Each plate is composed with the precision of a painting and the soul of a family recipe.",
-          "The dining room, with its warm wood paneling, soft candlelight, and curated artwork, provides an intimate setting for up to 76 guests. Private dining alcoves offer exclusivity for special occasions."
+          "An extraordinary venue designed for grand celebrations and corporate events. Accommodating 300-350 people in a theatre-style arrangement, Aspire provides a majestic setting with state-of-the-art facilities and elegant decor to make your events truly memorable.",
+          "For Banquet Enquiries, please contact:\n+91 92880 34447 (GM Benale) or +91 81370 69997 (OM Benale)"
         ]}
-        image="/assets/hl1.png"
-        cta={{ text: 'View Menu \u2192', href: '/food' }}
+        image="/assets/hl3.png"
+        cta={{ text: 'Plan Your Event \u2192', href: 'tel:+919288034447' }}
         imageLeft={true}
         bgColor="var(--color-bg-primary)"
       />
 
       <HighlightSection
-        label="CAFÉ & LOUNGE"
-        title="Cafe Conclave"
+        label="EVENTS & CELEBRATIONS"
+        title="Mirage"
         body={[
-          "A sophisticated café and lounge perfect for casual meetings, high tea, or evening cravings. Enjoy our selection of premium coffees, freshly baked pastries, and light bites throughout the day.",
-          "From late morning, the cafe buzzes with the aroma of freshly ground Malabar coffee and the gentle clink of porcelain. By afternoon, it transforms into a serene workspace for business travelers. As evening falls, Cafe Lounge becomes a sophisticated lounge, offering craft cocktails and an intimate atmosphere for conversation.",
-          "The interior design blends industrial chic with Kerala warmth \u2014 exposed brick walls, brass fixtures, comfortable leather seating, and large windows that flood the space with natural light."
+          "A versatile and sophisticated space perfect for medium-sized gatherings. With a capacity of 100-120 people, Mirage offers an intimate yet spacious environment ideal for wedding receptions, corporate meetings, and private parties.",
+          "For Banquet Enquiries, please contact:\n+91 92880 34447 (GM Benale) or +91 81370 69997 (OM Benale)"
         ]}
-        image="/assets/hl2.png"
-        cta={{ text: 'Explore Cafe Lounge \u2192', href: '/food' }}
+        image="/assets/hl1.png"
+        cta={{ text: 'Plan Your Event \u2192', href: 'tel:+919288034447' }}
         imageLeft={false}
         bgColor="var(--color-bg-white)"
       />
 
       <HighlightSection
-        label="EVENTS & CELEBRATIONS"
-        title="Grand Banquet Hall"
+        label="MEETINGS & EVENTS"
+        title="Harmoney"
         body={[
-          "Our pillar-less grand banquet hall is the city's most prestigious venue for weddings and large corporate events, featuring state-of-the-art acoustics and customizable lighting. With a capacity of up to 300 guests, this versatile space can be configured for intimate gatherings or grand galas.",
-          "The hall features state-of-the-art audiovisual equipment, customizable lighting systems, and direct access to our catering facilities. Our dedicated events team works closely with each client to create bespoke experiences, from weddings and receptions to product launches and conferences."
+          "Designed for focused and engaging events, Harmoney is highly flexible, accommodating 40-60 people in a theatre setup or 50 guests in a cluster arrangement. It is the perfect choice for workshops, seminars, and intimate celebrations.",
+          "For Banquet Enquiries, please contact:\n+91 92880 34447 (GM Benale) or +91 81370 69997 (OM Benale)"
         ]}
-        image="/assets/hl3.png"
-        cta={{ text: 'Plan Your Event \u2192', href: 'tel:+918137069997' }}
+        image="/assets/hl2.png"
+        cta={{ text: 'Enquire Now \u2192', href: 'tel:+919288034447' }}
         imageLeft={true}
         bgColor="var(--color-bg-primary)"
       />
 
       <HighlightSection
-        label="BUSINESS & MEETINGS"
-        title="Executive Board Rooms"
+        label="BUSINESS"
+        title="Executive Board Room"
         body={[
-          "Fully equipped modern boardrooms designed for high-level meetings and corporate presentations, complete with advanced audiovisual technology and dedicated business support services to create an environment where ideas flourish.",
-          "The Executive Board Room accommodates 20 guests in leather-appointed seating around a handcrafted mahogany table. The Conference Room seats 50 in a theater-style arrangement with full presentation capabilities. The intimate Strategy Room is ideal for senior leadership retreats and confidential discussions.",
-          "All rooms feature high-speed Wi-Fi, wireless presentation systems, video conferencing capabilities, and dedicated refreshment services. Our business center provides additional support including printing, translation, and secretarial services."
+          "Our premium Executive Board Room is fully equipped for high-level corporate meetings and strategy sessions. Designed to comfortably accommodate 25-30 people, it provides a professional environment with advanced audiovisual technology."
         ]}
         image="/assets/hl4.png"
         cta={{ text: 'Enquire Now \u2192', href: '/contact' }}
         imageLeft={false}
         bgColor="var(--color-bg-white)"
+      />
+
+      <HighlightSection
+        label="BUSINESS"
+        title="Board Room"
+        body={[
+          "An intimate and well-appointed meeting space for smaller corporate discussions and presentations. The Board Room comfortably seats 15-18 people, offering privacy, modern amenities, and a productive atmosphere for your team."
+        ]}
+        image="/assets/IMG_4585.JPG.jpeg"
+        cta={{ text: 'Enquire Now \u2192', href: '/contact' }}
+        imageLeft={true}
+        bgColor="var(--color-bg-primary)"
       />
 
       <CTASection />

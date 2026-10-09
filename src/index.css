@@ -10,8 +10,8 @@
     --color-bg-dark: #2d2417;
     --color-bg-gold: #c9a55a;
     --color-text-primary: #1a1a1a;
-    --color-text-secondary: #6b6560;
-    --color-text-muted: #9b9590;
+    --color-text-secondary: #3a3634;
+    --color-text-muted: #6b6560;
     --color-text-inverse: #ffffff;
     --color-accent-gold: #c9a55a;
     --color-accent-gold-light: #d4b978;
@@ -55,7 +55,7 @@
 
   body {
     font-family: var(--font-body);
-    font-weight: 300;
+    font-weight: 400;
     color: var(--color-text-primary);
     background-color: var(--color-bg-primary);
     line-height: 1.7;

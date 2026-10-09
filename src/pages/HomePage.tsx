@@ -216,9 +216,9 @@ function AboutSection() {
 function RoomsPreview() {
   const { ref, visible } = useScrollReveal();
   const rooms = [
-    { image: '/assets/sigle-standard.jpg', name: 'Standard Room', desc: 'SGL: \u20b92,800 \u00b7 DBL: \u20b93,200', price: 'From \u20b92,800 / night' },
-    { image: '/assets/semi-suite.jpg', name: 'Semi Suite', desc: 'SGL: \u20b93,500 \u00b7 DBL: \u20b94,000', price: 'From \u20b93,500 / night' },
-    { image: '/assets/executive.jpg', name: 'Executive Suite', desc: 'SGL: \u20b95,000 \u00b7 DBL: \u20b96,000', price: 'From \u20b95,000 / night' },
+    { image: '/assets/executive-suite-4.jpeg', name: 'Standard Room', desc: 'SGL: \u20b92,800 \u00b7 DBL: \u20b93,200', price: 'From \u20b92,800 / night' },
+    { image: '/assets/executive-suite-3.jpeg', name: 'Semi Suite', desc: 'SGL: \u20b93,500 \u00b7 DBL: \u20b94,000', price: 'From \u20b93,500 / night' },
+    { image: '/assets/executive-suite-1.jpeg', name: 'Executive Suite', desc: 'SGL: \u20b95,000 \u00b7 DBL: \u20b96,000', price: 'From \u20b95,000 / night' },
   ];
 
   return (
